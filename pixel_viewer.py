@@ -89,7 +89,7 @@ st.write("")
 #sg.Text("", size=(10,6))
 # Inject the custom CSS
 button_css =
-    """
+    
     <style>
         .stButton > button {
         font-size: 24px;
@@ -102,7 +102,7 @@ button_css =
         margin: 5px;
     }
     </style>
-    """
+    
 
 st.markdown(button_css, unsafe_allow_html=True)
 
