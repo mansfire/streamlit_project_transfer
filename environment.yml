@@ -1,0 +1,16 @@
+name: pixelexplorer
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - tifffile
+    - imagecodecs
+    - pysimplegui
+    - matplotlib
+    - pandas
+    - scikit-learn
+    - scikit-image
+    - PyQT5
