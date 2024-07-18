@@ -1,7 +1,8 @@
 import sys
 import numpy as np
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
 # decide what matplotlib backend to use depending on system
 if sys.platform == "linux" or sys.platform == "linux2":
     # linux
