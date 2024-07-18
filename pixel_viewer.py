@@ -120,34 +120,7 @@ st.button(label='Deselect All', on_click=deselect_all_samples)
 #sg.Text("", size=(10, 1), font=("Arial Bold", 16)),
 #sg.Button("Select All", key="-SELECT-ALL-"),
 #sg.Button("Deselect All", key="-DESELECT-ALL-"),
-    """[
-        sg.Text("Samples", size=(10, 1), font=("Arial Bold", 16)),
-        sg.Listbox(
-            values=slides_key_list,
-            enable_events=True,
-            size=(40, 10),
-            key="-SAMPLE LIST-",
-            font=("Arial", 16),
-            select_mode=sg.LISTBOX_SELECT_MODE_MULTIPLE,
-        ),
-    ],
-    [
-        sg.Text("Biomarkers", size=(10, 1), font=("Arial Bold", 16)),
-        sg.Listbox(
-            values=channel_names,
-            enable_events=True,
-            size=(40, 10),
-            key="-BM LIST-",
-            font=("Arial Bold", 16),
-        ),
-    ],
-    [sg.Text("Data transformations", size=(20, 1), font=("Arial Bold", 24))],
-    [sg.Text("_" * 20)],
-    [
-        sg.Input(
-            "np.log2(x)", enable_events=True, key="-TRANSFORM-", font=("Arial Bold", 18), size=(16, 1)
-        )
-    ],
-"""
+
+
 
 
