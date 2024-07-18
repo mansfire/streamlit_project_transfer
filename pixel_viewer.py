@@ -68,13 +68,6 @@ if 'num_bins' not in st.session_state:
     st.session_state.num_bins = 50
 if 'transform' not in st.session_state:
     st.session_state.transform = ""
-    
-
-# Placeholder for plot and plot variable
-subsample = 1
-lower_threshold = 0
-higher_threshold = 10000
-plot_placeholder = st.empty()
 
 #define functionality 
 def select_all_samples():
@@ -82,21 +75,38 @@ def select_all_samples():
 
 def deselect_all_samples():
     st.session_state.cur_samples = []
+    
 
-#llayouts
+# Placeholder for plot and plot variable
+subsample = 1
+lower_threshold = 0
+higher_threshold = 10000
+plot_placeholder = st.empty()
 button_css = """
-        <style>
-            .stButton > button {
-                font-size: 24px;
-                padding: 15px 32px;
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                border-radius: 12px;
-                cursor: pointer;
-            }
-        </style>
-        """
+<style>
+    .stButton > button {
+        font-size: 24px;
+        padding: 15px 32px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        margin: 5px;
+    }
+</style>
+"""
+# Inject the custom CSS
+st.markdown(button_css, unsafe_allow_html=True)
+
+# Threshold value
+st.session_state.threshold_value_input = st.number_input("Threshold Value", value=st.session_state.threshold_value or 0.0, on_change=update_threshold)
+
+# Sample list
+cur_samples = st.multiselect("Sample List", slides_key_list, default=st.session_state.cur_samples, on_change=update_samples, key='cur_samples')
+
+
+
 
 st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
   
