@@ -82,6 +82,12 @@ subsample = 1
 lower_threshold = 0
 higher_threshold = 10000
 plot_placeholder = st.empty()
+
+st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
+  
+st.write("")
+#sg.Text("", size=(10,6))
+# Inject the custom CSS
 button_css = """
 <style>
     .stButton > button {
@@ -96,7 +102,7 @@ button_css = """
     }
 </style>
 """
-# Inject the custom CSS
+
 st.markdown(button_css, unsafe_allow_html=True)
 
 # Threshold value
@@ -108,11 +114,6 @@ cur_samples = st.multiselect("Sample List", slides_key_list, default=st.session_
 
 
 
-st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
-  
-st.write("")
-#sg.Text("", size=(10,6))
-st.markdown(button_css, unsafe_allow_html=True)
        
 st.button(label='Select All', on_click=select_all_samples)
 st.button(label='Deselect All', on_click=deselect_all_samples)
