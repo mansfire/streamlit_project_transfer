@@ -47,26 +47,28 @@ print("Using channel names: ", channel_names)
 # assert len(channel_names) == slides[slides_key_list[0]].series[0].shape[0], f"Channel names length {len(channel_names)} doesnt match slide shape {slides[slides_key_list[0]].series[0].shape[0]}"
 
 # initialize session state
-if 'cur_samples' is not in st.session_state:
+
+if 'cur_samples' not in st.session_state:
     st.session_state.cur_samples = []
-if 'plot_x_range' is not in st.session_state:
+if 'plot_x_range' not in st.session_state:
     st.session_state.plot_x_range = [0, 2**16]
-if 'use_log_y' is not in st.session_state:
+if 'use_log_y' not in st.session_state:
     st.session_state.use_log_y = False
-if 'use_density' is not in st.session_state:
+if 'use_density' not in st.session_state:
     st.session_state.use_density = False
-if 'threshold_value' is not in st.session_state:
+if 'threshold_value' not in st.session_state:
     st.session_state.threshold_value = None
-if 'above_threshold' is not in st.session_state:
+if 'above_threshold' not in st.session_state:
     st.session_state.above_threshold = True
-if 'cur_data' is not in st.session_state:
+if 'cur_data' not in st.session_state:
     st.session_state.cur_data = None
-if 'gmm_data' is not in st.session_state:
+if 'gmm_data' not in st.session_state:
     st.session_state.gmm_data = None
-if 'num_bins' is not in st.session_state:
+if 'num_bins' not in st.session_state:
     st.session_state.num_bins = 50
-if 'transform' is not in st.session_state:
+if 'transform' not in st.session_state:
     st.session_state.transform = ""
+    
 
 # Placeholder for plot and plot variable
 subsample = 1
