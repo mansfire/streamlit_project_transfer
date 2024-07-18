@@ -83,18 +83,8 @@ def select_all_samples():
 def deselect_all_samples():
     st.session_state.cur_samples = []
 
-# app layout
-file_list_column = [
-    [
-        st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
-        #sg.Image("logo_small.png")
-    ],
-    [
-        st.write("")
-        #sg.Text("", size=(10,6))
-    ],
-    [
-        button_css = """
+#llayouts
+button_css = """
         <style>
             .stButton > button {
                 font-size: 24px;
@@ -107,6 +97,18 @@ file_list_column = [
             }
         </style>
         """
+
+# app layout
+file_list_column = [
+    [
+        st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
+        #sg.Image("logo_small.png")
+    ],
+    [
+        st.write("")
+        #sg.Text("", size=(10,6))
+    ],
+    [
         st.markdown(button_css, unsafe_allow_html=True)
        
         st.button(label='Select All', on_click=select_all_samples)
