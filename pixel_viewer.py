@@ -88,9 +88,10 @@ st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB
 st.write("")
 #sg.Text("", size=(10,6))
 # Inject the custom CSS
-button_css = """
-<style>
-    .stButton > button {
+button_css =
+    """
+    <style>
+        .stButton > button {
         font-size: 24px;
         padding: 15px 32px;
         background-color: #4CAF50;
@@ -100,8 +101,8 @@ button_css = """
         cursor: pointer;
         margin: 5px;
     }
-</style>
-"""
+    </style>
+    """
 
 st.markdown(button_css, unsafe_allow_html=True)
 
