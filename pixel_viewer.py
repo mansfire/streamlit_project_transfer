@@ -98,25 +98,17 @@ button_css = """
         </style>
         """
 
-# app layout
-file_list_column = [
-    [
-        st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
-        #sg.Image("logo_small.png")
-    ],
-    [
-        st.write("")
-        #sg.Text("", size=(10,6))
-    ],
-    [
-        st.markdown(button_css, unsafe_allow_html=True)
+st.image(image="logo_small.png", caption="Predx Logo",clamp=False, channels="RGB", output_format="auto")
+  
+st.write("")
+#sg.Text("", size=(10,6))
+st.markdown(button_css, unsafe_allow_html=True)
        
-        st.button(label='Select All', on_click=select_all_samples)
-        st.button(label='Deselect All', on_click=deselect_all_samples)
-        #sg.Text("", size=(10, 1), font=("Arial Bold", 16)),
-        #sg.Button("Select All", key="-SELECT-ALL-"),
-        #sg.Button("Deselect All", key="-DESELECT-ALL-"),
-    ],
+st.button(label='Select All', on_click=select_all_samples)
+st.button(label='Deselect All', on_click=deselect_all_samples)
+#sg.Text("", size=(10, 1), font=("Arial Bold", 16)),
+#sg.Button("Select All", key="-SELECT-ALL-"),
+#sg.Button("Deselect All", key="-DESELECT-ALL-"),
     """[
         sg.Text("Samples", size=(10, 1), font=("Arial Bold", 16)),
         sg.Listbox(
@@ -146,5 +138,5 @@ file_list_column = [
         )
     ],
 """
-]
+
 
