@@ -1,6 +1,7 @@
 import sys
 import numpy as np
-!pip install matplotlib
+$ conda activate pixelexplorer
+$ pip install matplotlib
 import matplotlib
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
